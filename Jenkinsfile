@@ -7,7 +7,7 @@ pipeline {
   stages{
     stage('terraform init and apply - dev'){
       steps{
-        sh "returnStatus: true, script: 'terraform workspace new dev'"
+        sh returnStatus: true, script: 'terraform workspace new dev'
         sh "terraform init"
       }
     }
